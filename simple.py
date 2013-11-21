@@ -7,7 +7,6 @@ class MyRequestHandler(http.Request):
              }
     def process(self):
         if self.pages.has_key(self.path):
-            print  self.path
             self.write(self.pages[self.path])
         else:
             self.setResponseCode(http.NOT_FOUND)
